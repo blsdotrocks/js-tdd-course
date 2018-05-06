@@ -4,7 +4,13 @@
   "description": "biblioteca criada no curso de js com tdd na prática do willian justen.",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,5 +26,12 @@
   "bugs": {
     "url": "https://github.com/blsdotrocks/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/blsdotrocks/js-tdd-course#readme"
+  "homepage": "https://github.com/blsdotrocks/js-tdd-course#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "husky": "^0.14.3"
+  }
 }
